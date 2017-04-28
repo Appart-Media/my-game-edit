@@ -169,7 +169,6 @@ LoadingState.init = function () {
 LoadingState.preload = function () {
     this.game.load.json('level:0', 'data/level00.json');
     this.game.load.json('level:1', 'data/level01.json');
-    this.game.load.json('level:2', 'data/level02.json');
 
     this.game.load.image('font:numbers', 'images/numbers.png');
 
@@ -183,6 +182,7 @@ LoadingState.preload = function () {
     this.game.load.image('grass:2x1', 'images/grass_2x1.png');
     this.game.load.image('grass:1x1', 'images/grass_1x1.png');
     this.game.load.image('key', 'images/key.png');
+    this.game.load.image('bullet', 'images/bullet.png')
 
     this.game.load.spritesheet('decoration', 'images/decor.png', 42, 42);
     this.game.load.spritesheet('hero', 'images/hero.png', 36, 42);
@@ -210,7 +210,7 @@ LoadingState.create = function () {
 
 PlayState = {};
 
-const LEVEL_COUNT = 3;
+const LEVEL_COUNT = 2;
 
 PlayState.init = function (data) {
     this.keys = this.game.input.keyboard.addKeys({
